@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+
+var score_txt = new sjs.Text("Your Score: 0", 21, "black");
+score_txt.setText("Your Score: "+localStorage.getItem("score"));
+score_txt.bottom().centerH();
+
+var menu_text = new sjs.Text("YOU'VE BEEN RKO'D!",28,"black");
+menu_text.centerH();
+
+var startBtn = new sjs.Button("Restart", function(){
+	window.location = "fish game.html";
+});
+startBtn.center();
+
+
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Fish </h1>
+<div id="target" style="margin:auto;background:green;"></div>
+</body>
+</html>

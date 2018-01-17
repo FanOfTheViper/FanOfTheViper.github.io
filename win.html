@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+var score_txt = new sjs.Text("Your Score: 0", 21, "black");
+score_txt.setText("Your Score:"+localStorage.getItem("score"));
+score_txt.moveTo(190,250)
+
+
+var menu_text = new sjs.Text("The Viper Strikes Again!",28,"black");
+menu_text.centerH();
+var startBtn = new sjs.Button("Start", function(){
+	window.location = "fish game.html";
+});
+startBtn.center();
+var info_text = new sjs.Text("Dedicated To The Everlasting Excellence Of The Viper Randy Orton <3",20,"black")
+info_text.bottom().centerH();
+
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Fish </h1>
+
+<div id="target" style="margin:auto;background:green;"></div>
+</body>
+</html>
